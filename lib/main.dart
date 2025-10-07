@@ -22,13 +22,13 @@ final GoRouter _router = GoRouter(
       },
     ),
     GoRoute(
-      path: '/home',
+      path: '/home_screen',
       builder: (BuildContext context, GoRouterState state) {
         return const HomeScreen();
       },
     ),
     GoRoute(
-      path: '/scan',
+      path: '/scan_screen',
       builder: (BuildContext context, GoRouterState state) {
         return const ScanScreen();
       },
@@ -46,7 +46,7 @@ final GoRouter _router = GoRouter(
       },
     ),
     GoRoute(
-      path: '/success',
+      path: '/success_screen',
       builder: (BuildContext context, GoRouterState state) {
         return const SuccessScreen();
       },
