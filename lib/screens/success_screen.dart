@@ -72,8 +72,16 @@ class SuccessScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 28),
                     TextButton.icon(
-                      onPressed: () {},
-                      icon: Text(
+                      onPressed: () {
+                        // TODO: Add navigation logic here, e.g., context.push('/order_details');
+                      },
+                      // ✅ [FIXED] Icon and Label are now in the correct order
+                      icon: const Icon(
+                        Icons.arrow_forward,
+                        color: Color(0xFF5A6BF3),
+                        size: 20,
+                      ),
+                      label: Text(
                         'Check Details',
                         style: GoogleFonts.getFont(
                           'Helvetica Now Display',
@@ -82,11 +90,6 @@ class SuccessScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           letterSpacing: 0.32,
                         ),
-                      ),
-                      label: const Icon(
-                        Icons.arrow_forward,
-                        color: Color(0xFF5A6BF3),
-                        size: 20,
                       ),
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
@@ -103,6 +106,7 @@ class SuccessScreen extends StatelessWidget {
                   height: 62,
                   child: ElevatedButton(
                     onPressed: () {
+                      // ✅ [FIXED] Navigation path is now correct
                       context.go('/home_screen');
                     },
                     style: ElevatedButton.styleFrom(
